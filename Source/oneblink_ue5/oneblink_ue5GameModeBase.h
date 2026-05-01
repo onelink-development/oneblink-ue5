@@ -13,5 +13,13 @@ UCLASS()
 class ONEBLINK_UE5_API Aoneblink_ue5GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	virtual void StartPlay() override;
 	
+	UFUNCTION(BlueprintCallable, Category = "VR")
+	void ForceVRFloorLevel();
+
+private:
+	void SetVRTrackingOrigin();
 };
